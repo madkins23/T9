@@ -43,7 +43,7 @@ Type in digit strings and see what happens:
       LOPT LOPU LOPV LOQT LOQU LOQV LORT LORU LORV LOST LOSU LOSV
     ### Finished [appname] 0.0.1
 
-Use <ctrl>-D to end the input stream or <ctrl>-C to kill the program.
+Use `<ctrl>-D` to end the input stream or `<ctrl>-C` to kill the program.
 
 ## Testing
 

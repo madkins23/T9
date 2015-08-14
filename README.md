@@ -11,8 +11,10 @@ and reveal a lot about a candidate.
 
 ## Exercise Description
 
-The exercise, described in `EXERCISE.md`, is to map a string of digits
-to a set of alphanumeric strings using the T9 telephone keypad.
+The exercise, described in
+[`EXERCISE.md`](https://github.com/madkins23/T9/blob/master/EXERCISE.md),
+is to map a string of digits to a set of alphanumeric strings
+using the T9 telephone keypad.
 
 > This might be useful in trying to memorize a new telephone number.
 
@@ -76,7 +78,7 @@ the data structure, after which the counter is tripped.
 The inner loop processes the wheels from right to left to
 generate the next result in the odometer state.
 
-> No one ever things of this, perhaps mechanical odometers are gone now?
+> No one ever thinks of this, perhaps mechanical odometers are gone now?
 
 ### Numeric
 
