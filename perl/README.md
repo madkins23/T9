@@ -50,13 +50,13 @@ Use <ctrl>-D to end the input stream or <ctrl>-C to kill the program.
 There is a small set of tests in file `digits` and a file of results in `results`.
 Test a method using:
 
-    $ perl t9 --method=odometer  < digits | diff -s results -
+    $ perl t9 --method=odometer  < ../test/digits | diff -s ../test/results -
 
 Each of the calculation methods should match the same results.
 
 It is also possible to test all of the methods against each other:
 
-    $ perl t9 --test
+    $ perl t9 --test < ../test/digits
 
 For each line of input all of the methods will be run and the results compared.
 If the results for different methods don't match then an error message will be generated.
