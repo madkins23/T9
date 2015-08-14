@@ -1,6 +1,6 @@
-= T9 Perl Solution
+# T9 Perl Solution
 
-== Perl
+## Perl
 
 Provide a script that filters strings of digits in `STDIN`
 to sets of alphanumeric strings in `STDOUT`.
@@ -8,15 +8,13 @@ to sets of alphanumeric strings in `STDOUT`.
 > Perl is my "go to" language for any kind of scripting and hacking around.
 I get more work done in less time than in any other language.
 
-== Installation and Usage
-
-=== Installation
+## Installation
 
 Acquire the code for this project in some normal fashion left as an exercise
 for the reader.
 There is no installation step past cloning the directory to your host.
 
-=== Usage
+## Usage
 
 Change to the `T9/perl` directory in your favorite command shell.
 
@@ -47,7 +45,7 @@ Type in digit strings and see what happens:
 
 Use <ctrl>-D to end the input stream or <ctrl>-C to kill the program.
 
-=== Testing
+## Testing
 
 There is a small set of tests in file `digits` and a file of results in `results`.
 Test a method using:
