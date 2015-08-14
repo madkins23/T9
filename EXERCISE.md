@@ -1,4 +1,4 @@
-# T9 Excercise
+# T9 Exercise
 
 Map strings of digits to potential alphanumeric character strings
 using the T9 telephone keypad.
