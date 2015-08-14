@@ -1,2 +1,0 @@
-#!/bin/sh
-perl t9 --test < ../test/digits | diff -s ../test/results -

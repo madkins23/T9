@@ -2,8 +2,9 @@
 
 ## Perl
 
-Provide a script that filters strings of digits in `STDIN`
-to sets of alphanumeric strings in `STDOUT`.
+Perl is a general-purpose scripting language with its roots in shell scripting.
+Once a contender for the 'P' in LAMP, it has been replaced there with PHP
+and everywhere else by Python or Ruby.
 
 > Perl is my "go to" language for any kind of scripting and hacking around.
 I get more work done in less time than in any other language.
@@ -18,19 +19,19 @@ There is no installation step past cloning the directory to your host.
 
 Change to the `T9/perl` directory in your favorite command shell.
 
-The main program is `t9` which filters from `STDIN` to `STDOUT`.
+The main program is `t9.pl` which filters from `STDIN` to `STDOUT`.
 Each line of input is a string made up of digits.
 Output will be multiple lines of results for each line of input.
 
-Run `t9` with a `--method` argument to specify the conversion method:
+Run `t9.pl` with a `--method` argument to specify the conversion method:
 
-    $ perl t9 --method=numeric
-    $ perl t9 --method=odometer
-    $ perl t9 --method=recursive
+    $ perl t9.pl --method=numeric
+    $ perl t9.pl --method=odometer
+    $ perl t9.pl --method=recursive
 
 Type in digit strings and see what happens:
 
-    $ perl t9 --test
+    $ perl t9.pl --test
     ### Starting [appname] 0.0.1
     5678
     5678                         108 results
@@ -50,16 +51,16 @@ Use `<ctrl>-D` to end the input stream or `<ctrl>-C` to kill the program.
 There is a small set of tests in file `digits` and a file of results in `results`.
 Test a method using:
 
-    $ perl t9 --method=odometer  < ../test/digits | diff -s ../test/results -
+    $ perl t9.pl --method=odometer  < ../test/digits | diff -s ../test/results -
 
 Each of the calculation methods should match the same results.
 
 It is also possible to test all of the methods against each other:
 
-    $ perl t9 --test < ../test/digits
+    $ perl t9.pl --test < ../test/digits
 
 For each line of input all of the methods will be run and the results compared.
 If the results for different methods don't match then an error message will be generated.
 Otherwise the output will be the same as for the other execution patterns.
 
-For convenience, the latter command is contained in the `t9test` shell script in this directory.
+For convenience, the latter command is contained in the `t9.sh` shell script in this directory.
