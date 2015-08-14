@@ -1,5 +1,13 @@
 = T9 Perl Solution
 
+== Perl
+
+Provide a script that filters strings of digits in `STDIN`
+to sets of alphanumeric strings in `STDOUT`.
+
+> Perl is my "go to" language for any kind of scripting and hacking around.
+I get more work done in less time than in any other language.
+
 == Installation and Usage
 
 === Installation
