@@ -16,10 +16,11 @@ to a set of alphanumeric strings using the T9 telephone keypad.
 
 > This might be useful in trying to memorize a new telephone number.
 
-The separate exercise description is intended to be given out to interview candidates.
-After completing (or failing) the exercise candidates can be directed to this web site:
+Solutions to this exercise can be found on github:
 
     https://github.com/madkins23/T9
+
+> Hand this out after a candidate completes (or fails) the exercise.
 
 ## Multiple Languages
 
