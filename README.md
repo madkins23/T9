@@ -110,6 +110,13 @@ At each stage a character is looked up from the appropriate lookup map.
 He didn't pursue it but eventually made a recursive solution work.
 I would have been more impressed if he had made this work.
 
+## Test Data
+
+There is test data in the `test` directory:
+
+* `digits` small set of small digit strings used for testing
+* `results` output from running Perl filter on `digits`
+
 ## Installation and Usage
 
 Acquire the code for this project in some normal fashion left as an exercise
