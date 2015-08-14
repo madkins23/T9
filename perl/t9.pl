@@ -8,7 +8,9 @@ t9.pl - filters strings of digits into alphanumeric string via the T9 telephone 
 
     usage: [perl] t9.pl <flag>*
     <flag>   --method=<method>  # solution method (required)
-             --debug=<integer>  # debug level (0..1) [1]
+             --test             # compare all solutions
+                                #  overrides --method=<method>
+             --debug=<integer>  # debug level (0..3) [1]
              --help             # short help
              --options          # longer help
              --manual           # full manual page
@@ -92,6 +94,8 @@ sub numeric (_) {
     my  @columns = ( );
     my  $maximum = 1;
     
+    warn ">>> numeric($digits)\n" if $options{debug} > 1;
+    
     # Build the digit base map and character mapping
     # based on the chars mapped from the original string.
     for (my $i = 0; $i < length($digits); $i++) {
@@ -128,6 +132,8 @@ sub numeric (_) {
 sub odometer (_) {
     my  $digits = $_;
     my  @wheels = ( );
+    
+    warn ">>> odometer($digits)\n" if $options{debug} > 1;
     
     # Build the 'odometer' with different wheels at each position
     # based on the chars mapped from the original string.
@@ -171,20 +177,29 @@ sub odometer (_) {
 ###########################################################################
 # Generate strings using a recursive routine.
 
-sub recursive ($$); # get rid of irritating warning:
+sub recursive ($$$); # get rid of irritating warning:
 # 'main::recursive() called too early to check prototype at t9 line XX.'
-sub recursive ($$) {
-    my ($starting, $remaining) = @_;
+sub recursive ($$$) {
+    my ($starting, $remaining, $indent) = @_;
     my  $focus  = substr($remaining, 0, 1);
     my  $tail   = length($remaining) > 0 && substr($remaining, 1);
     my  $chars  = $T9{$focus} || [ $focus ];
     my  @result = ( );
     
+    unless ($indent) {
+        warn ">>>$indent recursive('$remaining')\n"
+            if $options{debug} > 1
+    } else {
+        warn ">>>$indent recursive('$starting', '$remaining', '$indent')\n"
+            if $options{debug} > 2;
+    }
+    
     for my $char (@$chars) {
         my  $stem = "$starting$char";
     
         if (length($tail) > 0) {
-            push @result, recursive($stem, $tail); # 'line XX' from warning
+        	# This is 'line XX' from the irritating warning mentioned above.
+            push @result, recursive($stem, $tail, "$indent  ");
         } else {
             push @result, $stem;
         }
@@ -209,7 +224,7 @@ our %solution = (
 
     #######################################################################
     recursive => sub {
-        recursive("", $_);
+        recursive("", $_, '');
     }
 );
 

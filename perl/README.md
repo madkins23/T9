@@ -63,4 +63,9 @@ For each line of input all of the methods will be run and the results compared.
 If the results for different methods don't match then an error message will be generated.
 Otherwise the output will be the same as for the other execution patterns.
 
-For convenience, the latter command is contained in the `t9.sh` shell script in this directory.
+For convenience, the latter command is contained in the `t9.sh` shell script in this directory:
+
+    $ t9.sh 
+    ### Starting t9.pl 0.0.1
+    ### Finished t9.pl 0.0.1
+    Files ../test/results and - are identical
