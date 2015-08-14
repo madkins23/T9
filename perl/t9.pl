@@ -2,11 +2,11 @@
 
 =head1 NAME
 
-t9 - filters strings of digits into alphanumeric string via the T9 telephone keypad
+t9.pl - filters strings of digits into alphanumeric string via the T9 telephone keypad
 
 =head1 SYNOPSIS
 
-    usage: t9 <flag>*
+    usage: [perl] t9.pl <flag>*
     <flag>   --method=<method>  # solution method (required)
              --debug=<integer>  # debug level (0..1) [1]
              --help             # short help
@@ -254,7 +254,7 @@ pod2usage(-verbose => 2) if $options{manual};
 
 ###########################################################################
 
-my  $app = $0 =~ m|.*/(.*)| ? $1 : '[appname]';
+my  $app = $0 =~ m|.*/(.*)| ? $1 : 't9.pl';
 
 warn "### Starting $app $VERSION\n" if $options{debug};
 
