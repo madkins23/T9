@@ -61,3 +61,5 @@ It is also possible to test all of the methods against each other:
 For each line of input all of the methods will be run and the results compared.
 If the results for different methods don't match then an error message will be generated.
 Otherwise the output will be the same as for the other execution patterns.
+
+For convenience, the latter command is contained in the `t9test` shell script in this directory.
