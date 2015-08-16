@@ -72,7 +72,7 @@ our %options = (
     method  =>  '<none>',
     debug   =>  1
 );
-our $VERSION = '0.0.1';
+our $VERSION = '1.0.0';
 our %T9 = (
     '0' => [ '0' ],
     '1' => [ '1' ],
