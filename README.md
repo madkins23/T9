@@ -3,11 +3,17 @@
 Map strings of digits to potential alphanumeric character strings
 using the T9 telephone keypad.
 
-> This is a favorite interview question.
+This is a favorite interview question.
 It is trickier than it looks to most people
 resulting in frustration and retries
 which are often entertaining to watch
 and reveal a lot about a candidate.
+
+Since this isn't a well-known interview question AFAIK,
+any candidate who solves it right off the bat is probably a good hire
+from a programming standpoint.
+
+> Apologies to those who consider whiteboard questions in interviews problematic.
 
 ## Exercise Description
 
@@ -22,7 +28,9 @@ Solutions to this exercise can be found on github:
 
     https://github.com/madkins23/T9
 
-> Hand this out after a candidate completes (or fails) the exercise.
+> There is an "extra credit" at the bottom of the exercise.
+I've never even attempted that filter, but it's there in case
+an applicant nails the core problem in no time at all.
 
 ## Multiple Languages
 
