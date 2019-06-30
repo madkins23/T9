@@ -3,17 +3,18 @@
 Map strings of digits to potential alphanumeric character strings
 using the T9 telephone keypad.
 
-This is a favorite interview question.
-It is trickier than it looks to most people
+This is a favorite interview question of mine.
+It is trickier than it looks for most people
 resulting in frustration and retries
 which are often entertaining to watch
 and reveal a lot about a candidate.
 
-Since this isn't a well-known interview question AFAIK,
+Since this isn't a _well-known_ interview question AFAIK,
 any candidate who solves it right off the bat is probably a good hire
 from a programming standpoint.
 
 > Apologies to those who consider whiteboard questions in interviews problematic.
+For me it's always been the _most important part_ but YMMV.
 
 ## Exercise Description
 
