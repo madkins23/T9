@@ -37,10 +37,10 @@ our $VERSION = '1.0.0';
 ###########################################################################
 # Generate strings using a recursive routine.
 
-sub recursive ($$$); # get rid of irritating warning:
+sub recursive ($$); # get rid of irritating warning:
 # 'main::recursive() called too early to check prototype at t9 line XX.'
-sub recursive ($$$) {
-    my ($starting, $remaining, $indent) = @_;
+sub recursive ($$) {
+    my ($starting, $remaining) = @_;
     my  $focus  = substr($remaining, 0, 1);
     my  $tail   = length($remaining) > 0 && substr($remaining, 1);
     my  $chars  = $T9{$focus} || [ $focus ];
@@ -51,7 +51,7 @@ sub recursive ($$$) {
     
         if (length($tail) > 0) {
         	# This is 'line XX' from the irritating warning mentioned above.
-            push @result, recursive($stem, $tail, "$indent  ");
+            push @result, recursive($stem, $tail);
         } else {
             push @result, $stem;
         }
@@ -70,7 +70,7 @@ warn "### Starting $app $VERSION\n";
 while (<STDIN>) {
     chomp;
     
-    my  @result = recursive "", $_, '';
+    my  @result = recursive "", $_;
     
     printf "%-25s%7d result%s\n", $_, scalar @result, @result == 1 ? '' : 's';
     
