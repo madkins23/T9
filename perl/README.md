@@ -3,11 +3,7 @@
 ## Perl
 
 Perl is a general-purpose scripting language with its roots in shell scripting.
-Once a contender for the 'P' in LAMP, it has been replaced there with PHP
-and everywhere else by Python or Ruby.
-
-> Perl is my "go to" language for any kind of scripting and hacking around.
-I get more work done in less time than in any other language.
+Once a contender for the 'P' in LAMP, it has been replaced there with PHP or Python.
 
 ## Installation
 
@@ -19,19 +15,19 @@ There is no installation step past cloning the directory to your host.
 
 Change to the `T9/perl` directory in your favorite command shell.
 
-The main program is `t9.pl` which filters from `STDIN` to `STDOUT`.
+There are three stand-alone programs corresponding to the three known algorithms:
+
+* `numeric.pl`
+* `odometer.pl`
+* `recursive.pl`
+
+Each program filters from `STDIN` to `STDOUT`.
 Each line of input is a string made up of digits.
 Output will be multiple lines of results for each line of input.
 
-Run `t9.pl` with a `--method` argument to specify the conversion method:
-
-    $ perl t9.pl --method=numeric
-    $ perl t9.pl --method=odometer
-    $ perl t9.pl --method=recursive
-
 Type in digit strings and see what happens:
 
-    $ perl t9.pl --test
+    $ perl recursive.pl
     ### Starting [appname] 0.0.1
     5678
     5678                         108 results
@@ -48,24 +44,17 @@ Use `<ctrl>-D` to end the input stream or `<ctrl>-C` to kill the program.
 
 ## Testing
 
-There is a small set of tests in file `digits` and a file of results in `results`.
-Test a method using:
+The `test.sh` shell script in this directory executes a simple test against prepared data
+using all three scripts:
 
-    $ perl t9.pl --method=odometer  < ../test/digits | diff -s ../test/results -
+    $ test.sh 
+    ### Starting numeric.pl 1.0.0
+    ### Finished numeric.pl 1.0.0
+    Files /home/marc/Work/T9/perl/../test/results and - are identical
+    ### Starting odometer.pl 1.0.0
+    ### Finished odometer.pl 1.0.0
+    Files /home/marc/Work/T9/perl/../test/results and - are identical
+    ### Starting recursive.pl 1.0.0
+    ### Finished recursive.pl 1.0.0
+    Files /home/marc/Work/T9/perl/../test/results and - are identical
 
-Each of the calculation methods should match the same results.
-
-It is also possible to test all of the methods against each other:
-
-    $ perl t9.pl --test < ../test/digits
-
-For each line of input all of the methods will be run and the results compared.
-If the results for different methods don't match then an error message will be generated.
-Otherwise the output will be the same as for the other execution patterns.
-
-For convenience, the latter command is contained in the `t9.sh` shell script in this directory:
-
-    $ t9.sh 
-    ### Starting t9.pl 0.0.1
-    ### Finished t9.pl 0.0.1
-    Files ../test/results and - are identical
