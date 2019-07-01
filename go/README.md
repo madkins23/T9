@@ -35,7 +35,7 @@ Output will be multiple lines of results for each line of input.
 
 Type in digit strings and see what happens:
 
-    $ go run recursive.go
+    $ go run recursive/recursive.go
     ### Starting [appname] 0.0.1
     5678
     5678                         108 results
@@ -58,11 +58,10 @@ using all three scripts:
     $ test.sh 
     ### Starting numeric.go 1.0.0
     ### Finished numeric.go 1.0.0
-    Files /home/marc/Work/T9/perl/../test/results and - are identical
+    Files /home/marc/Work/T9/go/../test/results and - are identical
     ### Starting odometer.go 1.0.0
     ### Finished odometer.go 1.0.0
-    Files /home/marc/Work/T9/perl/../test/results and - are identical
+    Files /home/marc/Work/T9/go/../test/results and - are identical
     ### Starting recursive.go 1.0.0
     ### Finished recursive.go 1.0.0
-    Files /home/marc/Work/T9/perl/../test/results and - are identical
-
+    Files /home/marc/Work/T9/go/../test/results and - are identical
