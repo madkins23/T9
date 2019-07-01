@@ -39,6 +39,7 @@ I am structuring this project to allow multiple solutions in different
 programming languages in the fullness of time.
 For the moment these include:
 
+* Go
 * Perl
 
 > Can your favorite programming language do better?
