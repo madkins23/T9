@@ -40,6 +40,7 @@ programming languages in the fullness of time.
 For the moment these include:
 
 * Go
+* Java
 * Perl
 
 > Can your favorite programming language do better?
