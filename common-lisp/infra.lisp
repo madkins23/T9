@@ -32,23 +32,23 @@
   "Split a sequence into sub-sequences of the specified size"
   (seq-split seq n nil n))
 
-(defun format-results (item results)
+(defun format-results (digits results)
   "Format results for comparison with known solution."
   (let ((count (length results)))
-    (format t "~25a~7d result~a~%" item count (if (= count 1) "" "s"))
+    (format t "~25a~7d result~a~%" digits count (if (= count 1) "" "s"))
     (mapc #'(lambda (some-results)
               (format t " ")
               (mapc #'(lambda (single-result)
                         (format t " ~a" single-result))
                 some-results)
               (format t "~&"))
-      (seq-split-by-n results (ceiling (/ 79 (1+ (length item))))))))
+      (seq-split-by-n results (ceiling (/ 79 (1+ (length digits))))))))
 
 (defun process (fn line)
   "Process a number using the specified function and format results."
-  (let ((item (string-trim '(#\Space #\e #\t) line)))
-    (when (not (string= item ""))
-          (format-results item (funcall fn item)))))
+  (let ((digits (string-trim '(#\Space #\e #\t) line)))
+    (when (not (string= digits ""))
+          (format-results digits (funcall fn digits)))))
 
 (defun main (fn &optional stream)
   "Read lines from specified stream and process each line."
