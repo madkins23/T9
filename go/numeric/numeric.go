@@ -28,11 +28,6 @@ var T9 = map[string][]string{
 
 const VERSION = "1.0.0"
 
-type Wheel struct {
-	click int
-	chars []string
-}
-
 //////////////////////////////////////////////////////////////////////////////
 func numeric(digits string) []string {
 	columns := make([][]string, len(digits))
