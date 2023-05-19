@@ -1,5 +1,6 @@
 (in-package :cl-user)
 
+;; Recursive solution to T9 problem.
 (defun recursive-core (starting remaining)
   "Recursive core of solution to T9 problem."
   (let* ((focus (subseq remaining 0 1))
@@ -11,11 +12,8 @@
                   (if tail-p (recursive-core stem tail) (list stem))))
       (if (> (length chars) 0) chars (list focus)))))
 
+;; Recursive solution to T9 problem.
+;; Outer call configures starting state for inner recursive call.
 (defun recursive (item)
   "Recursive solution to T9 problem."
   (recursive-core "" item))
-
-(defun test-recursive ()
-  "Test with known file stream."
-  (with-open-file (stream "../test/digits")
-    (main #'recursive stream)))

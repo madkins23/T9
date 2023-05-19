@@ -60,3 +60,9 @@
             while line
             do (process fn line)))
     (format *error-output* "### Finished ~a~%" fn-name)))
+
+
+(defun test (fn)
+  "Test with known file stream."
+  (with-open-file (stream "../test/digits")
+    (main fn stream)))
