@@ -17,10 +17,6 @@
 (defmethod current ((whl wheel))
   (elt (chars whl) (index whl)))
 
-;; Display image for wheel.
-(defmethod print-object ((whl wheel) out)
-  (format out "wheel:~d~s" (index whl) (chars whl)))
-
 ;; Collect wheels appropriate to the specified digit string.
 (defun collect-wheels (digits)
   (mapcar #'(lambda (digit)
@@ -46,12 +42,6 @@
     (mapcar #'(lambda (whl) (current whl))
       (wheels mtr))))
 
-;; Display image for odometer.
-(defmethod print-object ((mtr meter) out)
-  (format out "Meter:")
-  (mapc #'(lambda (whl) (format out " ~a" whl))
-    (slot-value mtr 'wheels)))
-
 ;; Click odometer to its next setting.
 ;; Click wheels from end, continuing as long as
 ;; individual wheels signal carry-over by returning true.
@@ -69,18 +59,3 @@
   (let ((mtr (make-meter item)))
     (loop collect (current mtr)
           while (click mtr))))
-
-(let ((mtr (make-meter "4")))
-  (format t "~a~%" mtr)
-  (format t "current: ~a~%" (current mtr))
-  (format t "click:   ~a~%" (click mtr))
-  (format t "current: ~a~%" (current mtr))
-  (format t "click:   ~a~%" (click mtr))
-  (format t "current: ~a~%" (current mtr))
-  (format t "click:   ~a~%" (click mtr))
-  (format t "current: ~a~%" (current mtr))
-  (format t "click:   ~a~%" (click mtr))
-  (format t "current: ~a~%" (current mtr))
-  nil)
-
-(odometer "206")
