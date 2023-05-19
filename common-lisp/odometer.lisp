@@ -55,7 +55,7 @@
   t)
 
 ;; Odometer solution to T9 problem.
-(defun odometer (item)
-  (let ((mtr (make-meter item)))
+(defun odometer (digits)
+  (let ((mtr (make-meter digits)))
     (loop collect (current mtr)
           until (click mtr))))

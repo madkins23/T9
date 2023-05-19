@@ -14,6 +14,6 @@
 
 ;; Recursive solution to T9 problem.
 ;; Outer call configures starting state for inner recursive call.
-(defun recursive (item)
+(defun recursive (digits)
   "Recursive solution to T9 problem."
-  (recursive-core "" item))
+  (recursive-core "" digits))
