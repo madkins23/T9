@@ -56,7 +56,7 @@ the potential solutions, but that won't generally work.
 
 The recursive solution is most common, and arguably the simplest.
 Other solutions represent an unrolling of the recursion,
-or rather a more format representation of the state that
+or rather a more formal representation of the state that
 is kept in the execution stack in the recursive solution.
 
 > The first thing I'm looking for is that the candidate recognizes
