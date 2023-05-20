@@ -1,0 +1,17 @@
+(in-package :asdf-user)
+
+(defsystem "t9"
+  :name "T9"
+  :long-name "T9 Common Lisp Examples"
+  :description "Example code in Common Lisp for T9 programming problem."
+  :version "0.0.0"
+  :author "Marc M. Adkins <MMADKI+T9@Doorways.org>"
+  :maintainer "Marc M. Adkins <MMADKI+T9@Doorways.org>"
+  :license "MIT"
+  :homepage "https://github.com/madkins23/t9"
+  :source-control "https://github.com/madkins23/t9"
+  ; :depends-on (:cl-ppcre :str :uuid)
+  :components ((:file "infra")
+               (:file "recursive")
+               (:file "odometer")
+               (:file "numeric")))
