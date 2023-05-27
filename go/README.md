@@ -33,9 +33,9 @@ Each program filters from `STDIN` to `STDOUT`.
 Each line of input is a string made up of digits.
 Output will be multiple lines of results for each line of input.
 
-Type in digit strings and see what happens:
+Type in digit strings after the program starts (no prompt) and see what happens:
 
-    $ go run recursive/recursive.go < ../test/digits 
+    $ go run recursive/recursive.go
     ### Starting recursive.go 1.0.0
     5678
     5678                         108 results
