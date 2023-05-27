@@ -28,7 +28,7 @@ List<String> numeric(String digits) {
     return chars;
   });
 
-  List<String> result = List.empty(growable: true);
+  var result = <String>[];
 
   // Now just count.
   for (var i = 0; i < maximum; i++) {

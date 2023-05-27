@@ -18,11 +18,11 @@ const version = '1.0.0';
 List<String> recursive(String remaining, [String starting = '']) {
   var focus = remaining[0];
   var tail = remaining.isNotEmpty ? remaining.substring(1) : '';
-
-  List<String> result = List.empty(growable: true);
-
   var chars = t9[focus];
   chars ??= [focus];
+
+  var result = <String>[];
+
   for (var char in chars) {
     var stem = starting + char;
 

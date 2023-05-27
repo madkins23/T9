@@ -40,7 +40,7 @@ List<String> odometer(String digits) {
     return Wheel(chars);
   });
 
-  List<String> result = List.empty(growable: true);
+  var result = <String>[];
 
   while (true) {
     //  Next result string is from current state of 'odometer'.
