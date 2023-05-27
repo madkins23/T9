@@ -37,7 +37,7 @@ type Wheel struct {
 func odometer(digits string) []string {
 	wheels := make([]Wheel, 0)
 
-	// Build the 'odometer' with different whiles at each position
+	// Build the 'odometer' with different wheels at each position
 	// based on the characters mapped from the original string.
 	for _, character := range digits {
 		chars := T9[string(character)]
