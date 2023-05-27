@@ -50,13 +50,9 @@ List<String> odometer(String digits) {
     var carryOver = true;
     for (var wheel in wheels.reversed) {
       carryOver = wheel.click();
-      if (!carryOver) {
-        break;
-      }
+      if (!carryOver) break;
     }
-    if (carryOver) {
-      return result;
-    }
+    if (carryOver) return result;
   }
 }
 
@@ -72,7 +68,8 @@ void main(List<String> arguments) {
     // Dart has no sprintf for some reason (though it's available as a 3rd part package).
     // The following uses the Dart string interpolation mechanism just to be Dart-ish.
     stdout.write(
-        "${digits.padRight(25)}${results.length.toString().padLeft(7, " ")} $resultWord\n");
+        "${digits.padRight(25)}${results.length.toString().padLeft(7, " ")}"
+        " $resultWord\n");
 
     var count = 79 ~/ (digits.length + 1);
     var r = 0;

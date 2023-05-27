@@ -61,7 +61,8 @@ void main(List<String> arguments) {
     // Dart has no sprintf for some reason (though it's available as a 3rd part package).
     // The following uses the Dart string interpolation mechanism.
     stdout.write(
-        "${digits.padRight(25)}${results.length.toString().padLeft(7, " ")} $resultWord\n");
+        "${digits.padRight(25)}${results.length.toString().padLeft(7, " ")}"
+        " $resultWord\n");
 
     var count = 79 ~/ (digits.length + 1);
     var r = 0;
