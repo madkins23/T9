@@ -27,7 +27,7 @@ There are three stand-alone programs corresponding to the three known algorithms
 > The `go` language will not support two scripts in the same directory.
 The entry point for each script is the `main()` routine in the `main` package.
 Thus multiple top-level scripts will be in conflict.
-This is why the scripts are in separete subdirectories.
+This is why the scripts are in separate subdirectories.
 
 Each program filters from `STDIN` to `STDOUT`.
 Each line of input is a string made up of digits.
