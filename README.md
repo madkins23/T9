@@ -40,6 +40,7 @@ programming languages in the fullness of time.
 For the moment these include:
 
 * Common Lisp
+* Dart
 * Go
 * Java
 * Perl
