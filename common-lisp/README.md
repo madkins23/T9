@@ -1,4 +1,4 @@
-# T9 Go Solution
+# T9 Common Lisp Solution
 
 ## Common Lisp
 
